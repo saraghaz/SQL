@@ -1,0 +1,23 @@
+Select * from superstore
+order by price;
+
+select sum(price)
+from superstore;
+
+select Avg(price)
+from superstore;
+
+select min(price)
+from superstore;
+
+select max(price)
+from superstore;
+
+
+select* from superstore
+where item_name ="Kitchen Supplies"
+group by item_name;
+
+select count(price), item_name
+from superstore
+group by item_name;
