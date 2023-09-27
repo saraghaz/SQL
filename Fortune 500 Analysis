@@ -1,0 +1,25 @@
+
+SELECT Company_name,
+CASE
+ WHEN paid_time_off_days >= 30 THEN 'Very Great'
+ WHEN paid_time_off_days >=21 Then 'Great'
+ ELSE'not great'
+END AS PTO_Category
+From fortune_companies
+Where industry='Healthcare'
+
+select*from fortune_companies;
+
+Select industry, Avg(revenue) AS avg_revenue
+FROM fortune_companies
+Group by industry
+Having Avg_revenue>300.0;
+
+SELECT *
+FROM fortune_companies
+WHERE (industry = 'Technology' AND revenue > 200.0)
+   OR industry = 'Retail';
+
+SELECT company_name, min(revenue)
+FROM fortune_companies
+WHERE industry = 'Retail';
