@@ -1,0 +1,29 @@
+Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want your store to specialize in.
+You should have a table for all the items in your store, and at least 5 columns for the kind of data you think you'd need to store.
+You should sell at least 15 items, and use select statements to order your items by price and show at least one statistic about the items.
+
+CREATE TABLE Clothing_store ( item_id INTEGER primary key, item_name TEXT, size INTEGER,price NUMERIC, quantity INTEGER);
+
+INSERT INTO Clothing_store VALUES 
+(1, 'T-shirt', 'M', 20, 10),
+(2, 'Maxi', 'S', 30, 12),
+(3, 'Shorts', 'L', 25, 15),
+(4, 'Blue shirts', 'X-SMALL', 25, 20),
+(6, 'Pants', 'S', 25, 15),
+(5, 'Denim Jeans', 'S', 35, 20),
+(7, 'Tights', 'M', 15, 10),
+(8, 'Baseball Cap', 'S', 10, 18),
+(9, 'Floral Dress', 'M', 17, 12),
+(10, 'Running Shoes', 'S', 45, 15),
+(11, 'Sweater', 'M', 25, 10),
+(12, 'Socks', 'Standard', 6, 12),
+(13, 'Yoga Legging', 'S', 18, 8),
+(14, 'Yoga Shirt', 'S', 20, 9),
+(15, 'Pilates Legging', 'M', 25, 8);
+
+Select *
+From Clothing_store
+Order by price ASC;
+
+Select Avg(Price) AS Avg_price
+From Clothing_store;
